@@ -1,0 +1,40 @@
+/**************
+reset
+**************/
+body, div, span, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+   font-family: 'Open Sans', sans-serif;  
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+/**************
+content
+**************/
+#tubacco {
+  width: 90vw;
+  height: 5vw;
+  background:
+    linear-gradient(to right,#fff 20%,#464441 20.1% 20.2%,#fff 20.3% 20.4%,#464441 20.5% 20.6%,#fff 20.7% 20.8%,#fff 25.8%,#f5f5f5 25.8%,#f5f5f5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 .1vw 0 rgba(0,0,0,0.4), -.2vw .5vw .5vw 0 rgba(0,0,0,0.7), 0 -.3vw .5vw 0 rgba(0,0,0,0.4) inset;
+  border-radius: .1vw .1vw .1vw .1vw;
+  /*animation:2s linear infinite fire__box;*/
+}
+
+@keyframes fire__box { 
+    0% { width: 90vw; } 
+    100% { width: 25vw; }
+}
