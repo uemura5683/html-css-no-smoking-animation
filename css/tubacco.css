@@ -11,8 +11,8 @@ body, div, span, ul, li {
 }
 body {
   background: #5d5d5d;
-  padding: 100%;
-  font-family: 'Open Sans', sans-serif;  
+  padding: 100% 0 0;
+  font-family: 'Open Sans', sans-serif;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -24,17 +24,46 @@ body {
 /**************
 content
 **************/
+body:after {
+  background: red;
+  width: 39vw;
+  height: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  animation: 1s linear infinite no_smoking 1s;
+}
+body:before {
+  border: 2vw solid red;
+  width: 40vw;
+  height: 40vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+  animation: 1s linear infinite no_smoking 1s;
+}
 #tubacco {
   width: 90vw;
   height: 5vw;
-  background: radial-gradient(circle at 70%, #f5f5f5 20%,#f5f5f5 70%,#464441 70.1% 70.2%,#fff 70.3% 70.4%,#464441 70.5% 70.6%,#fff 70.7% 70.8%,#fff 75.8%,#fff 75.8%,#fff);
+  background: radial-gradient(
+              circle at 70%,
+              #f5f5f5 20%,
+              #f5f5f5 70%,
+              #464441 70.1% 70.2%,
+              #fff 70.3% 70.4%,
+              #464441 70.5% 70.6%,
+              #fff 70.7% 70.8%,
+              #fff 75.8%,
+              #fff 75.8%,#fff);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   box-shadow: 0 0 .1vw 0 rgba(0,0,0,0.4), -.2vw .5vw .5vw 0 rgba(0,0,0,0.7), 0 -.3vw .5vw 0 rgba(0,0,0,0.4) inset;
   border-radius: 1.0vw / 3.0vw 0.1vw 0.1vw 3.0vw;
-  /*animation:2s linear infinite fire__box;*/
   z-index: -1;
 }
 #tubacco:before {
@@ -53,7 +82,7 @@ content
 #tubacco:after {
   content: '';
   width: 1vw;
-  padding: 20% 0 0 0;
+  padding: 0% 0 0 0;
   position: absolute;
   background: white;
   content: "";
@@ -63,16 +92,17 @@ content
   right: 0;
   bottom: 5vw;
   opacity: 1;
-  animation: 3s linear infinite mokumoku 1s;
+  animation: 10s linear infinite mokumoku 1s;
 }
 @keyframes mokumoku { 
-    0% { opacity: 0; bottom: 5vw; padding: 20% 0 0 0;} 
-    25% { opacity: 1; bottom: 5vw; padding: 20% 0 0 0; } 
-    75% { opacity: 1; bottom: 5vw; padding: 20% 0 0 0;} 
-    100% { opacity: 0; bottom: 5vw; padding: 20% 0 0 0;}
+    0% { opacity: 0; width: 1vw; right: 0; bottom: 5vw; padding:  0% 0 0 0;} 
+    10% { opacity: 1; width: 1vw; right: 0; bottom: 5vw; padding: 0% 0 0 0; } 
+    75% { opacity: 1; width: 5vw; right: -5vw; bottom: 5vw; padding: 40% 0 0 0;} 
+    100% { opacity: 0; width: 1vw; right: 0; bottom: 5vw; padding: 40% 0 0 0;}
 }
 
-@keyframes fire__box { 
-    0% { width: 90vw; } 
-    100% { width: 25vw; }
+@keyframes no_smoking { 
+    0% { opacity: 1; } 
+    50% { opacity: 0; } 
+    100% { opacity: 1; }
 }
