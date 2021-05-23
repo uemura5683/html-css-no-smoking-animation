@@ -2,20 +2,24 @@
 reset
 **************/
 body, div, span, ul, li {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 body {
-   font-family: 'Open Sans', sans-serif;  
+  background: #5d5d5d;
+  padding: 100%;
+  font-family: 'Open Sans', sans-serif;  
 }
 *, *::before, *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
+*::before, *::after {
+  content: '';
+}
 
 /**************
 content
@@ -32,6 +36,39 @@ content
   box-shadow: 0 0 .1vw 0 rgba(0,0,0,0.4), -.2vw .5vw .5vw 0 rgba(0,0,0,0.7), 0 -.3vw .5vw 0 rgba(0,0,0,0.4) inset;
   border-radius: .1vw .1vw .1vw .1vw;
   /*animation:2s linear infinite fire__box;*/
+  z-index: -1;
+}
+#tubacco:before {
+  content: '';
+  width: 68px;
+  height: 100%;
+  border-radius: 50%;
+  background-image: radial-gradient( closest-side, #c5623b 0%, #ec571d 50%, #b13d10 65%, #9c3107 75.5%, #9a3a14 82.85%, #d65827 88%, #bb4213 100% );
+  position: absolute;
+  bottom: 0;
+  right: -2%;
+  opacity: 1;
+  z-index: 50;
+}
+#tubacco:after {
+  content: '';
+  width: 5vw;
+  padding: 20% 0 0 0;
+  position: absolute;
+  background: white;
+  content: "";
+  filter: blur(2vw);
+  z-index: 50;
+  border-radius: 60% 50% 50% 30% / 20% 30% 30% 50%;
+  right: 0;
+  opacity: 0;
+  animation: 3s linear infinite mokumoku 1s;
+}
+@keyframes mokumoku { 
+    0% { opacity: 0; bottom: 20%; padding: 20% 0 0 0;} 
+    25% { opacity: 1; bottom: 20%; padding: 20% 0 0 0; } 
+    75% { opacity: 1; bottom: 100%; padding: 20% 0 0 0;} 
+    100% { opacity: 0; bottom: 100%; padding: 20% 0 0 0;}
 }
 
 @keyframes fire__box { 
