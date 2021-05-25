@@ -108,27 +108,29 @@ body:before {
   animation: 10s linear infinite mokumoku 0s;
 }
 @keyframes fire { 
-    0%  { background-image: radial-gradient(
-                              closest-side,
-                              #c5623b 0%,
-                              #ec571d 50%, 
-                              #b13d10 65%,
-                              #9c3107 75.5%,
-                              #9a3a14 82.85%,
-                              #d65827 88%,
-                              #bb4213 100%
-                            );
+    0%  { background-image:
+            radial-gradient(
+              closest-side,
+              #c5623b 0%,
+              #ec571d 50%, 
+              #b13d10 65%,
+              #9c3107 75.5%,
+              #9a3a14 82.85%,
+              #d65827 88%,
+              #bb4213 100%
+            );
         } 
-    50% { background-image: radial-gradient(
-                              closest-side,
-                              #bb4213 0%,
-                              #d65827 50%, 
-                              #9a3a14 65%,
-                              #9c3107 75.5%,
-                              #b13d10 82.85%,
-                              #ec571d 88%,
-                              #c5623b 100%
-                            );
+    50% { background-image:
+            radial-gradient(
+              closest-side,
+              #bb4213 0%,
+              #d65827 50%, 
+              #9a3a14 65%,
+              #9c3107 75.5%,
+              #b13d10 82.85%,
+              #ec571d 88%,
+              #c5623b 100%
+            );
         } 
 }
 @keyframes mokumoku { 
